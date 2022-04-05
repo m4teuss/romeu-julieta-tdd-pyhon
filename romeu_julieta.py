@@ -14,11 +14,13 @@ class TesteRomeuEJulieta(TestCase):
     #def teste_existe_romeu_e_julieta(self):
         #romeu_julieta()
 
-    def teste_rej_deve_retornar_queijo_quando_input_for_3(self):
+    def teste_rej_deve_retornar_queijo_quando_input_for_multiplos_de_3(self):
         """romeu_julieta (3) -> 'queijo'"""
-        valor_entrada = 3
+        valores_entrada = [3, 6, 9]
         valor_esperado = 'queijo'
-        self.assertEqual(romeu_julieta(valor_entrada), valor_esperado)
+        for valor in valores_entrada:
+            with self.subTest(valor = valor):
+                self.assertEqual(romeu_julieta(valores_entrada), valor_esperado)
 
     def teste_rej_deve_retornar_goiabada_quando_input_for_5(self):
         """romeu_julieta (3) -> 'queijo'"""
