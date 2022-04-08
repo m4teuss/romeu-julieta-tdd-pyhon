@@ -8,7 +8,7 @@ Uma entrada de valores numéricos (uma listas deles)
 """
 
 from unittest import TestCase, main
-from app import romeu_julieta 
+from app import romeu_julieta, romeus_julietas 
 
 class TesteRomeuEJulieta(TestCase):
     #def teste_existe_romeu_e_julieta(self):
@@ -36,5 +36,11 @@ class TesteRomeuEJulieta(TestCase):
         valor_entrada = 15
         valor_esperado = 'romeu e julieta'
         self.assertEqual(romeu_julieta(valor_entrada), valor_esperado)
+
+
+    def teste_romeus_e_julietas_deve_retornar_queijo_goiabada_e_romeu_julieta_quando_receber_uma_lista_com_todos_os_multiplos(self):
+        valores_entrada = [3, 5, 15]
+        valor_esperado = ['queijo', 'goiabada', 'romeu e julieta']
+        self.assertEqual(romeus_julietas(valores_entrada), valor_esperado)
 
 main()
