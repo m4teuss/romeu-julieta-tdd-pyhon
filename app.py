@@ -7,6 +7,9 @@ def queijo(numero: int) -> str:
 def queijo_goiabada(numero: int) -> str:
     return 'romeu e julieta' if eq(mod(numero, 3), 0) and eq(mod(numero, 5), 0 ) else numero
 
+def goiabada(numero: int) -> str:
+    return 'goiabada' if eq(mod(numero, 5), 0) else numero
+
 def romeu_julieta(valorEntrada:int):
     if queijo_goiabada(valorEntrada) == 'romeu e julieta':
         return 'romeu e julieta'
@@ -14,6 +17,6 @@ def romeu_julieta(valorEntrada:int):
     if queijo(valorEntrada) == 'queijo':
         return 'queijo'
     
-    if valorEntrada == 5:
+    if goiabada (valorEntrada) == 'goiabada':
         return 'goiabada'
 
